@@ -9,6 +9,7 @@ Api use: [pokeapi.co](https://pokeapi.co/)
 - Import this repository
 
 - In folder, run this NPM command line
-> npm start
+`npm start`
+
 
 
