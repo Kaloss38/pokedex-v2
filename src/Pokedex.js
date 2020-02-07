@@ -4,6 +4,7 @@ export default class Pokedex{
         this.arrPokemons = arrPokemons;
         this.count = 1;
         this.promise = [];
+        this.main = document.getElementById('main');
     }
     
     async loadPokemons () {
@@ -18,8 +19,22 @@ export default class Pokedex{
             }
             
             console.log(this.arrPokemons);
+            this.displayPokemons(this.arrPokemons);
         } catch (err) {
             console.error(err);
         }
     };
+
+    displayPokemons(){
+        const htmlString = this.arrPokemons.map((pokemon) => {
+            return `
+            <article>
+                <p>${pokemon.name}</p>
+            </article>
+        `;
+        })
+        .join('');
+
+        this.main.innerHTML = htmlString;
+    }
 }
