@@ -2,4 +2,4 @@
 
 Pokedex from **Nintendo** liscence, **Pokemon** !
 
-Api use: [pokeapi.co](http://handlebarsjs.com/)
+Api use: [pokeapi.co](https://pokeapi.co/)
