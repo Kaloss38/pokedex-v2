@@ -36,10 +36,8 @@ export default class Pokedex{
             `
             <article>
                     <p>#${pokemon.id}</p>
-                    <span>   
                     <p>${pokemon.name}</p>
-                    <span class="types">${pokemon.types.map( type => `<p>${type}</p>`).join("<p>/</p>")}</span>
-                    </span>
+                    <span class="types">${pokemon.types.map( type => `<p class="${type}">${type}</p>`).join(" ")}</span>
                     <p><img src="${pokemon.sprite}"></p>
             </article>
         `
