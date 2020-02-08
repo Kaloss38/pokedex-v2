@@ -1,3 +1,4 @@
+/* Header */
 .bg-light{
     background-color: #eb4034 !important;
 }
@@ -35,6 +36,7 @@ header{
     transition: width 0.4s linear;
     }
 
+/* --- Main content ---*/
 #main{
     margin-top: 75px;
     font-weight: bold;

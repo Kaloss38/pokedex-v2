@@ -6,7 +6,7 @@ export default class Pokedex{
         this.promise = [];
         this.main = document.getElementById('main');
     }
-    
+    //Load pokemons from Api and display it
     async loadPokemons () {
         try {
             while(this.count <= 802){
@@ -26,7 +26,7 @@ export default class Pokedex{
             console.error(err);
         }
     };
-
+    //receive pokemons array and display on dom
     displayPokemons(){
         const htmlString = this.arrPokemons.map((pokemon) => {
             return `
