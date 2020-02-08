@@ -20,4 +20,10 @@ Start server
 npm start
 ```
 
+# Functionnalities
+
+- Get and display all pokemons from API
+
+- Real time research by name or type
+
 
