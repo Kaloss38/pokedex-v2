@@ -25,6 +25,8 @@ export default class Pokedex{
 
             this.displayPokemons(this.arrPokemons);
 
+            
+
         } catch (err) {
             console.error(err);
         }
@@ -32,7 +34,7 @@ export default class Pokedex{
 
     //receive pokemons array and display pokemon elements on dom
     displayPokemons(arr){
-        const htmlString = this.arrPokemons.map(pokemon => 
+        const htmlString = arr.map(pokemon => 
             `
             <article>
                     <p>#${pokemon.id}</p>
