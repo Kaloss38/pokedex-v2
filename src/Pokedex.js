@@ -5,7 +5,9 @@ export default class Pokedex{
         this.count = 1;
         this.promise = [];
         this.main = document.getElementById('main');
+        this.loader = document.getElementById('loader');
     }
+
     //Load pokemons from Api and display it
     async loadPokemons () {
         try {
@@ -15,7 +17,8 @@ export default class Pokedex{
                 this.arrPokemons.push({
                     id: this.promise.id,
                     name: this.promise.name,
-                    sprite: this.promise.sprites.front_default
+                    sprite: this.promise.sprites.front_default,
+                    types: this.promise.types.map(type => type.type.name)
                 });
                 this.count++;
             }
@@ -26,20 +29,21 @@ export default class Pokedex{
             console.error(err);
         }
     };
-    //receive pokemons array and display on dom
-    displayPokemons(){
-        const htmlString = this.arrPokemons.map((pokemon) => {
-            return `
+
+    //receive pokemons array and display pokemon elements on dom
+    displayPokemons(arr){
+        const htmlString = this.arrPokemons.map(pokemon => 
+            `
             <article>
                     <p>#${pokemon.id}</p>
                     <span>   
                     <p>${pokemon.name}</p>
-                    <p>Electric / Vol </p>
+                    <span class="types">${pokemon.types.map( type => `<p>${type}</p>`).join("<p>/</p>")}</span>
                     </span>
                     <p><img src="${pokemon.sprite}"></p>
             </article>
-        `;
-        })
+        `
+        )
         .join('');
 
         this.main.innerHTML = htmlString;

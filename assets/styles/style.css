@@ -75,3 +75,7 @@ span{
       margin: auto;
       text-align: center;
   }
+
+  .types{
+     display: flex; 
+  }
