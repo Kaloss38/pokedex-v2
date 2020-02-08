@@ -15,10 +15,13 @@ export default class Pokedex{
                 this.arrPokemons.push({
                     id: this.promise.id,
                     name: this.promise.name,
+                    sprite: this.promise.sprites.front_default
                 });
                 this.count++;
             }
+
             this.displayPokemons(this.arrPokemons);
+
         } catch (err) {
             console.error(err);
         }
@@ -28,12 +31,12 @@ export default class Pokedex{
         const htmlString = this.arrPokemons.map((pokemon) => {
             return `
             <article>
-                <span>
-                    <p>${pokemon.id}</p>
-                </span>
-                <span>    
+                    <p>#${pokemon.id}</p>
+                    <span>   
                     <p>${pokemon.name}</p>
-                </spam>
+                    <p>Electric / Vol </p>
+                    </span>
+                    <p><img src="${pokemon.sprite}"></p>
             </article>
         `;
         })
