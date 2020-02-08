@@ -11,12 +11,13 @@ Api use: [pokeapi.co](https://pokeapi.co/)
 - In folder, run NPM command line:
 
 install Node
-
-`npm install`
+```
+npm install
+```
 
 Start server
-
-`npm start`
-
+```
+npm start
+```
 
 
