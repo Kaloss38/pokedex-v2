@@ -1,6 +1,9 @@
+body{
+    background-color: grey;
+}
 /* Header */
 .bg-light{
-    background-color: #eb4034 !important;
+    background-color: #de4747 !important;
 }
 
 
@@ -40,6 +43,10 @@ header{
         margin: auto;
     }
 
+    .btn{
+        margin-right: 15px;
+    }
+
     .research-nav{
         background-color: #a30b0b !important;
     }
@@ -51,7 +58,8 @@ header{
 }    
 
 article{
-    border-bottom:2px solid grey;
+    background-color: white;
+    border-bottom: 15px black 0.2;
     display: flex;
     justify-content: space-between;
     width: 50%;
