@@ -36,9 +36,17 @@ header{
     transition: width 0.4s linear;
     }
 
+    .btn-group{
+        margin: auto;
+    }
+
+    .research-nav{
+        background-color: #a30b0b !important;
+    }
+
 /* --- Main content ---*/
 #main{
-    margin-top: 75px;
+    margin-top: 170px;
     font-weight: bold;
 }    
 
