@@ -20,15 +20,11 @@ export default class Pokedex{
                     sprite: this.promise.sprites.front_default,
                     types: this.promise.types.map(type => type.type.name)
                 });
-                this.displayPokemons(this.arrPokemons);
+                
                 this.count++;
             }
-
-            
-
-            
-
-        } catch (err) {
+            this.displayPokemons(this.arrPokemons);
+            } catch (err) {
             console.error(err);
         }
     };
